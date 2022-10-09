@@ -122,7 +122,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Employee Name</b>
+          <b> Name</b>
         </h6>
       ),
       selector: (row) => row.name,
@@ -132,7 +132,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Employee Email</b>
+          <b> Email</b>
         </h6>
       ),
       selector: (row) => row.email,
@@ -142,7 +142,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Department Allocated-1</b>
+          <b>Dept-1</b>
         </h6>
       ),
       selector: (row) => row.employeeDepts[0]?.DeptName,
@@ -152,7 +152,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Department Allocated-2</b>
+          <b>Depart-2</b>
         </h6>
       ),
       selector: (row) => row.employeeDepts[1]?.DeptName,
@@ -162,7 +162,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Department Allocated-3</b>
+          <b>Dept-3</b>
         </h6>
       ),
       selector: (row) => row.employeeDepts[2]?.DeptName,
@@ -172,7 +172,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Education Qualification-1</b>
+          <b>Education-1</b>
         </h6>
       ),
       selector: (row) => row.employeeDepts[0]?.employeeEdus[0]?.eduName,
@@ -182,7 +182,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Education Qualification-2</b>
+          <b>Education-2</b>
         </h6>
       ),
       selector: (row) => row.employeeDepts[0]?.employeeEdus[1]?.eduName,
@@ -192,7 +192,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Education Qualification-3</b>
+          <b>Education-3</b>
         </h6>
       ),
       selector: (row) => row.employeeDepts[0]?.employeeEdus[2]?.eduName,
@@ -202,7 +202,7 @@ const ProfilePage = () => {
     {
       name: (
         <h6 style={{ fontSize: "18px" }}>
-          <b>Salary Allocated</b>
+          <b>Salary </b>
         </h6>
       ),
       selector: (row) =>

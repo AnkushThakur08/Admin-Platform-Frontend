@@ -30,8 +30,15 @@ import {
   EducationQualificationPage,
   EditEducationQualificationPage,
   AddEducationQualificationPage,
+  ShowBlockEducationPage,
+  ShowUnBlockEducation,
   AddDepartmentPage,
   EditDepartmentPage,
+  BlockDepartmentpage,
+  UnBlockDepartmentpage,
+  GetSalaryLevel1Department,
+  GetSalaryLevel2Department,
+  GetSalaryLevel3Department,
   ViewIndividualEducationPage,
   EditSalaryPage,
   AddEmployeePage2,
@@ -94,6 +101,28 @@ const App = () => {
             }
           />
 
+          <Route
+            path="/showBlockEducation"
+            element={
+              isAuthenticated() ? (
+                <ShowBlockEducationPage />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+
+          <Route
+            path="/showUnBlockEducation"
+            element={
+              isAuthenticated() ? (
+                <ShowUnBlockEducation />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+
           {/* TODO: DEPARTMENT */}
 
           <Route
@@ -119,6 +148,61 @@ const App = () => {
             element={
               isAuthenticated() ? (
                 <EditDepartmentPage />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+
+          <Route
+            path="blockDepartment"
+            element={
+              isAuthenticated() ? (
+                <BlockDepartmentpage />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+
+          <Route
+            path="unblockDepartment"
+            element={
+              isAuthenticated() ? (
+                <UnBlockDepartmentpage />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+
+          <Route
+            path="salary1department"
+            element={
+              isAuthenticated() ? (
+                <GetSalaryLevel1Department />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+
+          <Route
+            path="salary2department"
+            element={
+              isAuthenticated() ? (
+                <GetSalaryLevel2Department />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+
+          <Route
+            path="salary3department"
+            element={
+              isAuthenticated() ? (
+                <GetSalaryLevel3Department />
               ) : (
                 <Navigate to="/home" />
               )

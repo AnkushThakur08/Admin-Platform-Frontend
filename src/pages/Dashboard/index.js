@@ -7,11 +7,18 @@ import InvitiesPage from "./InvitiesPage";
 import EditEducationQualificationPage from "./EducationQualification/EditEducationQualificationPage";
 import AddEducationQualificationPage from "./EducationQualification/AddEducationQualificationPage";
 import EducationQualificationPage from "./EducationQualification/EducationQualificationPage";
+import ShowBlockEducationPage from "./EducationQualification/ShowBlockEducationPage";
+import ShowUnBlockEducation from "./EducationQualification/ShowUnBlockEducation";
 
 // Department
 import DepartmentPage from "./Department/DepartmentPage";
 import AddDepartmentPage from "./Department/AddDepartmentPage";
 import EditDepartmentPage from "./Department/EditDepartmentPage";
+import BlockDepartmentpage from "./Department/BlockDepartmentpage";
+import UnBlockDepartmentpage from "./Department/UnBlockDepartmentPage";
+import GetSalaryLevel1Department from "./Department/GetSalaryLevel1Department";
+import GetSalaryLevel2Department from "./Department/GetSalaryLevel2Department";
+import GetSalaryLevel3Department from "./Department/GetSalaryLevel3Department";
 
 // SALARY PAGE
 import SalaryPage from "./Salary/SalaryPage";
@@ -32,11 +39,18 @@ export {
   EducationQualificationPage,
   EditEducationQualificationPage,
   AddEducationQualificationPage,
+  ShowBlockEducationPage,
+  ShowUnBlockEducation,
 
   // Department
   EditDepartmentPage,
   AddDepartmentPage,
   DepartmentPage,
+  BlockDepartmentpage,
+  UnBlockDepartmentpage,
+  GetSalaryLevel1Department,
+  GetSalaryLevel2Department,
+  GetSalaryLevel3Department,
 
   // SALARY
   EditSalaryPage,

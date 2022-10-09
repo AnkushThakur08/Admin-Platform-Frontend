@@ -21,3 +21,14 @@ export const getDepartmentDetailsByChart = async () => {
     })
     .catch((error) => console.log(error));
 };
+
+
+export const getEducationDetailsByChart = async () => {
+  return fetch(`${API}/getEducationDetailsByChart`, {
+    method: "GET",
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .catch((error) => console.log(error));
+};

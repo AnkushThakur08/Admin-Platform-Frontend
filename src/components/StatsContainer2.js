@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 // Icons
-import { AiOutlineMail } from "react-icons/ai";
-import { FiPhoneCall } from "react-icons/fi";
-import { AiFillFacebook } from "react-icons/ai";
-import { GiMoneyStack } from "react-icons/gi";
+
+import { BiBlock } from "react-icons/bi";
+import { CgUnblock } from "react-icons/cg";
+import { FcDepartment } from "react-icons/fc";
 
 // Toast
 import { toast } from "react-toastify";
@@ -50,16 +50,19 @@ const StatsContainer = () => {
     {
       AuthenticationMethod: "Blocked Department",
       count: values2.datas2.BlockCount,
+      link: "/blockDepartment",
     },
 
     {
       AuthenticationMethod: "UnBlock Department",
       count: values2.datas2.UnblockCount,
+      link: "/unblockDepartment",
     },
 
     {
       AuthenticationMethod: "Total Department",
       count: values2.datas2.blockUnblockTotal,
+      link: "/department",
     },
   ];
 
@@ -67,25 +70,28 @@ const StatsContainer = () => {
     {
       title: "Blocked Department",
       count: data2[0].count || 0,
-      icon: <GiMoneyStack size={56} />,
+      icon: <BiBlock size={56} />,
       color: "#383CC1",
       bcg: "#e0e8f9",
+      link: "/blockDepartment",
     },
     {
       title: "unBlock Department",
       count: data2[1].count,
-      icon: <GiMoneyStack size={56} />,
+      icon: <CgUnblock size={56} />,
       color: "#e9b949",
       bcg: "#fcefc7",
+      link: "/unblockDepartment",
     },
 
     {
-        title: "Total Department",
-        count: data2[1].count,
-        icon: <GiMoneyStack size={56} />,
-        color: "#e9b949",
-        bcg: "#fcefc7",
-      },
+      title: "Total Department",
+      count: data2[2].count,
+      icon: <FcDepartment size={56} />,
+      color: "#3b82f6",
+      bcg: "#e7f0fe",
+      link: "/department",
+    },
   ];
   return (
     <Wrapper>

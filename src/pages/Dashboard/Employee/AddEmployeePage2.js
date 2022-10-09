@@ -68,9 +68,11 @@ const AddEmployeePage2 = () => {
       }).then((data) => {
         console.log(data);
         if (data.data.status == 400) {
-          toast.error(data.data.message);
+          // toast.error(data.data.message);
+          console.log(data.data.message);
         } else if (data.data.status == 200) {
-          toast.success(data.data.message);
+          // toast.success(data.data.message);
+          console.log(data.data.message);
           console.log("DEPARTMENT ADDED&&&&&&&&&&&&&&&&&&&&&&&&");
         }
       });
@@ -85,14 +87,17 @@ const AddEmployeePage2 = () => {
         console.log("ANKUSH");
         console.log(data);
         if (data.data.status == 400) {
-          toast.error(data.data.message);
+          // toast.error(data.data.message);
+          console.log(data.data.message);
           setUserData({
             ...userData,
             error: data.data.message,
             success: false,
           });
         } else if (data.data.status == 200) {
-          toast.success(data.data.message);
+          // toast.success(data.data.message);
+          console.log(data.data.message);
+
           console.log("EDUCATION ADDED&&&&&&&&&&&&&&&&&&&&&&&&");
           setUserData({
             ...userData,

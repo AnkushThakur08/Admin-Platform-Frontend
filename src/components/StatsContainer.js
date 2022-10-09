@@ -28,12 +28,6 @@ const StatsContainer = () => {
     datas: [],
   });
 
-  const [values2, setValues2] = useState({
-    error: "",
-    success: "false",
-    datas2: [],
-  });
-
   const preload = () => {
     getAllUser().then((data) => {
       console.log(data);
@@ -44,18 +38,6 @@ const StatsContainer = () => {
       } else {
         console.log(data.data);
         setValues({ ...values, datas: data.data });
-      }
-    });
-
-    getDepartmentDetailsByChart().then((data) => {
-      console.log(data);
-      console.log("SECOUNDATA", data.data);
-      if (data.data.status == 400) {
-        toast.error("ERROR");
-        setValues2({ ...values2, success: false });
-      } else {
-        console.log(data.data);
-        setValues2({ ...values2, datas2: data.data });
       }
     });
   };
@@ -73,28 +55,18 @@ const StatsContainer = () => {
     {
       AuthenticationMethod: "Level-1",
       count: values.datas.countBySalaryLevel1,
-      // count: 10,
+      link: "/salary1department",
     },
     {
       AuthenticationMethod: "Level-2",
       count: values.datas.countBySalaryLevel2,
+      link: "/salary2department",
     },
 
     {
       AuthenticationMethod: "Level-3",
       count: values.datas.countBySalaryLevel3,
-    },
-  ];
-
-  const data2 = [
-    {
-      AuthenticationMethod: "Blocked Department",
-      count: values2.datas2.BlockCount,
-    },
-
-    {
-      AuthenticationMethod: "UnBlock Department",
-      count: values2.datas2.UnblockCount,
+      link: "/salary3department",
     },
   ];
 
@@ -111,6 +83,7 @@ const StatsContainer = () => {
       icon: <GiMoneyStack size={56} />,
       color: "#383CC1",
       bcg: "#e0e8f9",
+      link: "/salary1department",
     },
     {
       title: "Department provide Level-2 Salary",
@@ -118,6 +91,7 @@ const StatsContainer = () => {
       icon: <GiMoneyStack size={56} />,
       color: "#e9b949",
       bcg: "#fcefc7",
+      link: "/salary2department",
     },
 
     {
@@ -126,25 +100,10 @@ const StatsContainer = () => {
       icon: <GiMoneyStack size={56} />,
       color: "#3b82f6",
       bcg: "#e7f0fe",
+      link: "/salary3department",
     },
   ];
 
-  const defaultState2 = [
-    {
-      title: "Blocked Department",
-      count: data[0].count || 0,
-      icon: <GiMoneyStack size={56} />,
-      color: "#383CC1",
-      bcg: "#e0e8f9",
-    },
-    {
-      title: "unBlock Department",
-      count: data[1].count,
-      icon: <GiMoneyStack size={56} />,
-      color: "#e9b949",
-      bcg: "#fcefc7",
-    },
-  ];
   return (
     <Wrapper>
       {defaultState.map((item, index) => {
